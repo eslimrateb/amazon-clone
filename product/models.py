@@ -23,18 +23,23 @@ class Product(models.Model):
     description = models.TextField(_("description"), max_length=50000)
     brand = models.ForeignKey('Brand',verbose_name=_("brand"),related_name='product_brand',on_delete=models.SET_NULL,null=True)
     tags = TaggableManager()
+    
+    def __str__(self):
+        return self.name
 
 
 
 class ProductImages(models.Model):
     product = models.ForeignKey(Product,verbose_name=_("product"),related_name='product_image',on_delete=models.CASCADE)
     image = models.ImageField(_("image"), upload_to='productimages')
-
+    def __str__(self):
+        return f"Image for {self.product.name}"
 
 class Brand(models.Model):
     name = models.CharField(_("name"), max_length=100)
     image = models.ImageField(_("image"), upload_to='brand')
-
+    def __str__(self):
+        return self.name
 
 class Review(models.Model):
     user = models.ForeignKey(User,related_name='review_user',on_delete=models.SET_NULL,null=True)
