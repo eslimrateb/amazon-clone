@@ -38,22 +38,15 @@
                                 <label class="details-label new">{{product.flag}}</label>
                             </div>
                             <ul class="details-preview"> 
-                                {% if product_images %}
-                                    {% for image in product_images %}
+                                    {% for image in product.product_image.all %}
                                         <li><img src="{{image.image.url}}" alt="product"></li>
                                     {% endfor %}
-                                {% else %}
-                                    <li><img src="{{product.image.url}}" alt="{{product.name}}"></li>
-                                {% endif %}
                             </ul>
                             <ul class="details-thumb">
-                                {% if product_images %}
-                                    {% for image in product_images %}
+                                    {% for image in product.product_image.all %}
                                         <li><img src="{{image.image.url}}" alt="product"></li>
                                     {% endfor %}
-                                {% else %}
-                                    <li><img src="{{product.image.url}}" alt="{{product.name}}"></li>
-                                {% endif %}
+                            
                             </ul>
                         </div>
                     </div>
@@ -79,9 +72,10 @@
                             <div class="details-list-group">
                                 <label class="details-list-title">tags:</label>
                                 <ul class="details-tag-list">
-                                    <li><a href="#">organic</a></li>
-                                    <li><a href="#">fruits</a></li>
-                                    <li><a href="#">chilis</a></li>
+                                    {% for tag in object.tags.all %}
+                                        <li><a href="#">{{ tag.name }}</a></li>
+                                    {% endfor %}
+                    
                                 </ul>
                             </div>
                             <div class="details-list-group">
