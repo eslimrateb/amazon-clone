@@ -32,4 +32,3 @@ def seed_products(n):
             brand=brands[randint(0, len(brands)-1)]
         )
     print(f"{n} products seeded successfully.")
-seed_products(5)
