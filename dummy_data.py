@@ -3,7 +3,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
 django.setup()
 from faker import Faker
 from product.models import Product, Brand
-from random import randint, seed
+from random import randint
 
 def seed_brands(n):
     fake = Faker()
