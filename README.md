@@ -30,7 +30,7 @@ To run Dj4-Amazon-Clone locally, follow these steps:
 
 2. Install the required dependencies using `pip`:
    ````
-   pip install -r requirements.txt
+   pip install django=4.2
 
 3. Apply the database migrations:
    ````
