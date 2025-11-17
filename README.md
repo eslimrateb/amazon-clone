@@ -41,10 +41,3 @@ To run Dj4-Amazon-Clone locally, follow these steps:
    python manage.py runserver
 
 5. Open your web browser and visit `http://localhost:8000` to access the application.
-
-
-
-## Project Demo
-![](screenshot2.jpg)
-
-Enjoy your shopping experience with Dj4-Amazon-Clone!
