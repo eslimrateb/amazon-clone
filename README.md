@@ -26,7 +26,7 @@ The following technologies and frameworks are utilized in the development of Dj4
 ## Getting Started
 To run Dj4-Amazon-Clone locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/Pythondeveloper6/Dj4-Amazon-Clone.git`
+1. Clone the repository: `git clone https://github.com/eslimrateb/amazon-clone.git`
 
 2. Install the required dependencies using `pip`:
    ````
